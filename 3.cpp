@@ -45,12 +45,13 @@ int main() {
         tmp = n / 2;
         
         while (tmp > 0) {
-            //cout << tmp << " ";
+            if (tmp % 2 == 0)
+                tmp--;
             if (n % tmp == 0 && isPrime(tmp)) {
                 cout << tmp << endl;
                 break;
             }
-            tmp--;
+            tmp -= 2;
         }
     }
     return 0;
